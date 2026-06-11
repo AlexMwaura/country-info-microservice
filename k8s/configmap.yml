@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: country-info-config
+  namespace: country-info
+  labels:
+    app.kubernetes.io/name: country-info-service
+data:
+  SPRING_PROFILES_ACTIVE: "prod"
+  DB_HOST: "country-info-mysql"
+  DB_PORT: "3306"
+  DB_NAME: "country_info_db"
+  SOAP_CLIENT_CONNECT_TIMEOUT: "5000"
+  SOAP_CLIENT_READ_TIMEOUT: "10000"
+  JAVA_OPTS: "-XX:MaxRAMPercentage=75.0 -XX:InitialRAMPercentage=50.0"

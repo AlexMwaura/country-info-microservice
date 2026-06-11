@@ -1,0 +1,36 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.H2Dialect
+  cache:
+    type: none
+
+soap:
+  client:
+    connect-timeout: 3000
+    read-timeout: 5000
+
+resilience4j:
+  circuitbreaker:
+    instances:
+      soapService:
+        sliding-window-size: 5
+        failure-rate-threshold: 50
+        wait-duration-in-open-state: 5s
+        minimum-number-of-calls: 3
+  retry:
+    instances:
+      soapService:
+        max-attempts: 1
+
+logging:
+  level:
+    com.ncba.countryinfo: DEBUG
