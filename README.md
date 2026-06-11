@@ -67,7 +67,7 @@ Client ◀──201 {id, countryName, ...}──┘
 
 | Component           | Technology                           |
 |---------------------|--------------------------------------|
-| Language            | Java 21 (LTS)                        |
+| Language            | Java 17 (LTS)                        |
 | Framework           | Spring Boot 3.4.1                    |
 | Build Tool          | Maven                                |
 | Database            | MySQL 8.0                            |
@@ -123,7 +123,7 @@ curl -X POST http://localhost:8080/api/v1/countries \
 ## Quick Start
 
 ### Prerequisites
-- Java 21+
+- Java 17+
 - Maven 3.9+
 - MySQL 8.0+ (or use Docker)
 - Docker & Docker Compose (for containerized deployment)

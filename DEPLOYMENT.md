@@ -11,7 +11,7 @@
 ## Local Development Setup
 
 ### Prerequisites
-- Java 21 (verify: `java -version`)
+- Java 17 (verify: `java -version`)
 - Maven 3.9+ (verify: `mvn -version`)
 - MySQL 8.0+ running locally
 
